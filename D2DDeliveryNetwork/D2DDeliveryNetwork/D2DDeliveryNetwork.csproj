@@ -1,0 +1,648 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{928AE64C-D64D-4E53-9B8A-21DB33255BF8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>D2DDeliveryNetwork</RootNamespace>
+    <AssemblyName>D2DDeliveryNetwork</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data.Entity, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts\Dashboard.aspx" />
+    <Content Include="Accounts\Manage.aspx" />
+    <Content Include="Accounts\SignIn.aspx" />
+    <Content Include="Accounts\SignUp.aspx" />
+    <Content Include="Accounts\themes\amelia\bootstrap.css" />
+    <Content Include="Accounts\themes\amelia\bootstrap.min.css" />
+    <Content Include="Accounts\themes\cerulean\bootstrap.min.css" />
+    <Content Include="Accounts\themes\css\base.css" />
+    <Content Include="Accounts\themes\css\bootstrap-responsive.min.css" />
+    <Content Include="Accounts\themes\css\bootstrap.min.css" />
+    <Content Include="Accounts\themes\css\font-awesome-ie7.css" />
+    <Content Include="Accounts\themes\css\font-awesome.css" />
+    <Content Include="Accounts\themes\current\bootstrap.min.css" />
+    <Content Include="Accounts\themes\cyborg\bootstrap.min.css" />
+    <Content Include="Accounts\themes\font\fontawesome-webfont.svg" />
+    <Content Include="Accounts\themes\images\1.jpg" />
+    <Content Include="Accounts\themes\images\2.jpg" />
+    <Content Include="Accounts\themes\images\3.jpg" />
+    <Content Include="Accounts\themes\images\AOG.jpg" />
+    <Content Include="Accounts\themes\images\AOG.png" />
+    <Content Include="Accounts\themes\images\banner\aboutus.png" />
+    <Content Include="Accounts\themes\images\banner\blog.png" />
+    <Content Include="Accounts\themes\images\banner\contact.png" />
+    <Content Include="Accounts\themes\images\banner\details.png" />
+    <Content Include="Accounts\themes\images\banner\portfolio.png" />
+    <Content Include="Accounts\themes\images\blockRepeat.png" />
+    <Content Include="Accounts\themes\images\blog\1.jpg" />
+    <Content Include="Accounts\themes\images\blog\2.jpg" />
+    <Content Include="Accounts\themes\images\blog\3.jpg" />
+    <Content Include="Accounts\themes\images\blog\4.jpg" />
+    <Content Include="Accounts\themes\images\blog\5.jpg" />
+    <Content Include="Accounts\themes\images\blog\6.jpg" />
+    <Content Include="Accounts\themes\images\bodyBg.png" />
+    <Content Include="Accounts\themes\images\Canada.jpg" />
+    <Content Include="Accounts\themes\images\Cargo.jpg" />
+    <Content Include="Accounts\themes\images\Cargo.png" />
+    <Content Include="Accounts\themes\images\CargoLogistics.jpg" />
+    <Content Include="Accounts\themes\images\carousel\business_website_templates_1.jpg" />
+    <Content Include="Accounts\themes\images\carousel\business_website_templates_2.jpg" />
+    <Content Include="Accounts\themes\images\carousel\business_website_templates_3.jpg" />
+    <Content Include="Accounts\themes\images\carousel\business_website_templates_4.jpg" />
+    <Content Include="Accounts\themes\images\carousel\business_website_templates_5.jpg" />
+    <Content Include="Accounts\themes\images\carousel\services_dtl.jpg" />
+    <Content Include="Accounts\themes\images\clients\facebookLogo.jpg" />
+    <Content Include="Accounts\themes\images\clients\googleLogo.jpg" />
+    <Content Include="Accounts\themes\images\clients\my_web_solution.jpg" />
+    <Content Include="Accounts\themes\images\clients\twitterLogo.jpg" />
+    <Content Include="Accounts\themes\images\clients\youtube.png" />
+    <Content Include="Accounts\themes\images\Courier.png" />
+    <Content Include="Accounts\themes\images\D2DDeliveryNetwork-Logo.png" />
+    <Content Include="Accounts\themes\images\Delivery.jpg" />
+    <Content Include="Accounts\themes\images\Envelopes.jpg" />
+    <Content Include="Accounts\themes\images\ExpCourier.jpg" />
+    <Content Include="Accounts\themes\images\Express.jpg" />
+    <Content Include="Accounts\themes\images\Extra-Info.jpg" />
+    <Content Include="Accounts\themes\images\Extra1.jpg" />
+    <Content Include="Accounts\themes\images\facebook.png" />
+    <Content Include="Accounts\themes\images\footerbg.png" />
+    <Content Include="Accounts\themes\images\Globe.jpg" />
+    <Content Include="Accounts\themes\images\Handle.png" />
+    <Content Include="Accounts\themes\images\hd.jpg" />
+    <Content Include="Accounts\themes\images\headerbg.png" />
+    <Content Include="Accounts\themes\images\img180x120.png" />
+    <Content Include="Accounts\themes\images\img185x165.png" />
+    <Content Include="Accounts\themes\images\img64x64.png" />
+    <Content Include="Accounts\themes\images\International.jpg" />
+    <Content Include="Accounts\themes\images\Legal.jpg" />
+    <Content Include="Accounts\themes\images\logistics-concept-world-map-point-markers-connected-dotted-lines.jpg" />
+    <Content Include="Accounts\themes\images\Logistics.png" />
+    <Content Include="Accounts\themes\images\Logistics1.jpg" />
+    <Content Include="Accounts\themes\images\medical.png" />
+    <Content Include="Accounts\themes\images\Mexico.gif" />
+    <Content Include="Accounts\themes\images\NaWide.jpg" />
+    <Content Include="Accounts\themes\images\Parcels.png" />
+    <Content Include="Accounts\themes\images\PayChecks.png" />
+    <Content Include="Accounts\themes\images\portfolio\1.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\10.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\11.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\2.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\3.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\4.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\5.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\6.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\7.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\8.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\9.jpg" />
+    <Content Include="Accounts\themes\images\portfolio\mywebsolution.jpg" />
+    <Content Include="Accounts\themes\images\Process.jpg" />
+    <Content Include="Accounts\themes\images\Process1.jpg" />
+    <Content Include="Accounts\themes\images\rss.png" />
+    <Content Include="Accounts\themes\images\RTC.png" />
+    <Content Include="Accounts\themes\images\rush.png" />
+    <Content Include="Accounts\themes\images\Same-Day.jpg" />
+    <Content Include="Accounts\themes\images\shadow.png" />
+    <Content Include="Accounts\themes\images\shadowsReverse.png" />
+    <Content Include="Accounts\themes\images\Shutter-Info.jpg" />
+    <Content Include="Accounts\themes\images\smallShadows.png" />
+    <Content Include="Accounts\themes\images\Standard.png" />
+    <Content Include="Accounts\themes\images\Sun.jpg" />
+    <Content Include="Accounts\themes\images\tabrepeat.png" />
+    <Content Include="Accounts\themes\images\tabRepeatInactive.png" />
+    <Content Include="Accounts\themes\images\twitter.png" />
+    <Content Include="Accounts\themes\images\WeightCalc.png" />
+    <Content Include="Accounts\themes\images\World.jpg" />
+    <Content Include="Accounts\themes\images\WorldMap.jpg" />
+    <Content Include="Accounts\themes\images\youtube.png" />
+    <Content Include="Accounts\themes\journal\bootstrap.min.css" />
+    <Content Include="Accounts\themes\js\bootstrap-popover.js" />
+    <Content Include="Accounts\themes\js\bootstrap-tooltip.js" />
+    <Content Include="Accounts\themes\js\bootstrap.min.js" />
+    <Content Include="Accounts\themes\js\business_ltd_1.0.js" />
+    <Content Include="Accounts\themes\js\jquery-1.8.3.min.js" />
+    <Content Include="Accounts\themes\js\jquery.gmap.js" />
+    <Content Include="Accounts\themes\readable\bootstrap.min.css" />
+    <Content Include="Accounts\themes\simplex\bootstrap.min.css" />
+    <Content Include="Accounts\themes\slate\bootstrap.min.css" />
+    <Content Include="Accounts\themes\spacelab\bootstrap.min.css" />
+    <Content Include="Accounts\themes\spruce\bootstrap.css" />
+    <Content Include="Accounts\themes\spruce\bootstrap.min.css" />
+    <Content Include="Accounts\themes\superhero\bootstrap.min.css" />
+    <Content Include="Accounts\themes\switch\images\clr\amelia.png" />
+    <Content Include="Accounts\themes\switch\images\clr\cerulean.png" />
+    <Content Include="Accounts\themes\switch\images\clr\current.png" />
+    <Content Include="Accounts\themes\switch\images\clr\cyborg.png" />
+    <Content Include="Accounts\themes\switch\images\clr\journal.png" />
+    <Content Include="Accounts\themes\switch\images\clr\readable.png" />
+    <Content Include="Accounts\themes\switch\images\clr\simplex.png" />
+    <Content Include="Accounts\themes\switch\images\clr\slate.png" />
+    <Content Include="Accounts\themes\switch\images\clr\spacelab.png" />
+    <Content Include="Accounts\themes\switch\images\clr\spruce.png" />
+    <Content Include="Accounts\themes\switch\images\clr\superhero.png" />
+    <Content Include="Accounts\themes\switch\images\clr\united.png" />
+    <Content Include="Accounts\themes\switch\images\hideme.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern1.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern10.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern11.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern12.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern13.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern14.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern15.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern16.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern16~.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern17.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern17~.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern18.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern19.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern19~.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern2.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern20.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern20~.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern3.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern4.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern5.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern6.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern7.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern8.png" />
+    <Content Include="Accounts\themes\switch\images\pattern\pattern9.png" />
+    <Content Include="Accounts\themes\switch\images\styleTgl.png" />
+    <Content Include="Accounts\themes\switch\theamswitcher.js" />
+    <Content Include="Accounts\themes\switch\themeswitch.css" />
+    <Content Include="Accounts\themes\united\bootstrap.min.css" />
+    <Content Include="Accounts\Users.aspx" />
+    <Content Include="AOG.aspx" />
+    <Content Include="App_Data\DeliveryD2DNetwork.mdf" />
+    <Content Include="App_Data\DeliveryD2DNetwork_log.ldf">
+      <DependentUpon>DeliveryD2DNetwork.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contact.aspx" />
+    <Content Include="Courier.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Documents.aspx" />
+    <Content Include="Envelopes.aspx" />
+    <Content Include="Expedite.aspx" />
+    <Content Include="Fragile.aspx" />
+    <Content Include="Franchise.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Medical.aspx" />
+    <Content Include="NationWide.aspx" />
+    <Content Include="NextDay.aspx" />
+    <Content Include="Packages.aspx" />
+    <Content Include="Parcels.aspx" />
+    <Content Include="PayChecks.aspx" />
+    <Content Include="SameDay.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="themes\amelia\bootstrap.css" />
+    <Content Include="themes\amelia\bootstrap.min.css" />
+    <Content Include="themes\cerulean\bootstrap.min.css" />
+    <Content Include="themes\css\base.css" />
+    <Content Include="themes\css\bootstrap-responsive.min.css" />
+    <Content Include="themes\css\bootstrap.min.css" />
+    <Content Include="themes\css\font-awesome-ie7.css" />
+    <Content Include="themes\css\font-awesome.css" />
+    <Content Include="themes\current\bootstrap.min.css" />
+    <Content Include="themes\cyborg\bootstrap.min.css" />
+    <Content Include="themes\font\fontawesome-webfont.svg" />
+    <Content Include="themes\images\1.jpg" />
+    <Content Include="themes\images\2.jpg" />
+    <Content Include="themes\images\3.jpg" />
+    <Content Include="themes\images\AOG.jpg" />
+    <Content Include="themes\images\AOG.png" />
+    <Content Include="themes\images\banner\aboutus.png" />
+    <Content Include="themes\images\banner\blog.png" />
+    <Content Include="themes\images\banner\contact.png" />
+    <Content Include="themes\images\banner\details.png" />
+    <Content Include="themes\images\banner\portfolio.png" />
+    <Content Include="themes\images\blockRepeat.png" />
+    <Content Include="themes\images\blog\1.jpg" />
+    <Content Include="themes\images\blog\2.jpg" />
+    <Content Include="themes\images\blog\3.jpg" />
+    <Content Include="themes\images\blog\4.jpg" />
+    <Content Include="themes\images\blog\5.jpg" />
+    <Content Include="themes\images\blog\6.jpg" />
+    <Content Include="themes\images\bodyBg.png" />
+    <Content Include="themes\images\Canada.jpg" />
+    <Content Include="themes\images\Cargo.jpg" />
+    <Content Include="themes\images\Cargo.png" />
+    <Content Include="themes\images\CargoLogistics.jpg" />
+    <Content Include="themes\images\carousel\business_website_templates_1.jpg" />
+    <Content Include="themes\images\carousel\business_website_templates_2.jpg" />
+    <Content Include="themes\images\carousel\business_website_templates_3.jpg" />
+    <Content Include="themes\images\carousel\business_website_templates_4.jpg" />
+    <Content Include="themes\images\carousel\business_website_templates_5.jpg" />
+    <Content Include="themes\images\carousel\services_dtl.jpg" />
+    <Content Include="themes\images\clients\facebookLogo.jpg" />
+    <Content Include="themes\images\clients\googleLogo.jpg" />
+    <Content Include="themes\images\clients\my_web_solution.jpg" />
+    <Content Include="themes\images\clients\twitterLogo.jpg" />
+    <Content Include="themes\images\clients\youtube.png" />
+    <Content Include="themes\images\Courier.png" />
+    <Content Include="themes\images\D2DDeliveryNetwork-Logo.png" />
+    <Content Include="themes\images\Delivery.jpg" />
+    <Content Include="themes\images\Envelopes.jpg" />
+    <Content Include="themes\images\ExpCourier.jpg" />
+    <Content Include="themes\images\Express.jpg" />
+    <Content Include="themes\images\Extra-Info.jpg" />
+    <Content Include="themes\images\Extra1.jpg" />
+    <Content Include="themes\images\facebook.png" />
+    <Content Include="themes\images\footerbg.png" />
+    <Content Include="themes\images\Globe.jpg" />
+    <Content Include="themes\images\Handle.png" />
+    <Content Include="themes\images\hd.jpg" />
+    <Content Include="themes\images\headerbg.png" />
+    <Content Include="themes\images\img180x120.png" />
+    <Content Include="themes\images\img185x165.png" />
+    <Content Include="themes\images\img64x64.png" />
+    <Content Include="themes\images\International.jpg" />
+    <Content Include="themes\images\Legal.jpg" />
+    <Content Include="themes\images\logistics-concept-world-map-point-markers-connected-dotted-lines.jpg" />
+    <Content Include="themes\images\Logistics.png" />
+    <Content Include="themes\images\Logistics1.jpg" />
+    <Content Include="themes\images\medical.png" />
+    <Content Include="themes\images\Mexico.gif" />
+    <Content Include="themes\images\NaWide.jpg" />
+    <Content Include="themes\images\Parcels.png" />
+    <Content Include="themes\images\PayChecks.png" />
+    <Content Include="themes\images\portfolio\1.jpg" />
+    <Content Include="themes\images\portfolio\10.jpg" />
+    <Content Include="themes\images\portfolio\11.jpg" />
+    <Content Include="themes\images\portfolio\2.jpg" />
+    <Content Include="themes\images\portfolio\3.jpg" />
+    <Content Include="themes\images\portfolio\4.jpg" />
+    <Content Include="themes\images\portfolio\5.jpg" />
+    <Content Include="themes\images\portfolio\6.jpg" />
+    <Content Include="themes\images\portfolio\7.jpg" />
+    <Content Include="themes\images\portfolio\8.jpg" />
+    <Content Include="themes\images\portfolio\9.jpg" />
+    <Content Include="themes\images\portfolio\mywebsolution.jpg" />
+    <Content Include="themes\images\Process.jpg" />
+    <Content Include="themes\images\Process1.jpg" />
+    <Content Include="themes\images\rss.png" />
+    <Content Include="themes\images\RTC.png" />
+    <Content Include="themes\images\rush.png" />
+    <Content Include="themes\images\Same-Day.jpg" />
+    <Content Include="themes\images\shadow.png" />
+    <Content Include="themes\images\shadowsReverse.png" />
+    <Content Include="themes\images\Shutter-Info.jpg" />
+    <Content Include="themes\images\smallShadows.png" />
+    <Content Include="themes\images\Standard.png" />
+    <Content Include="themes\images\Sun.jpg" />
+    <Content Include="themes\images\tabrepeat.png" />
+    <Content Include="themes\images\tabRepeatInactive.png" />
+    <Content Include="themes\images\twitter.png" />
+    <Content Include="themes\images\WeightCalc.png" />
+    <Content Include="themes\images\World.jpg" />
+    <Content Include="themes\images\WorldMap.jpg" />
+    <Content Include="themes\images\youtube.png" />
+    <Content Include="themes\journal\bootstrap.min.css" />
+    <Content Include="themes\js\bootstrap-popover.js" />
+    <Content Include="themes\js\bootstrap-tooltip.js" />
+    <Content Include="themes\js\bootstrap.min.js" />
+    <Content Include="themes\js\business_ltd_1.0.js" />
+    <Content Include="themes\js\jquery-1.8.3.min.js" />
+    <Content Include="themes\js\jquery.gmap.js" />
+    <Content Include="themes\readable\bootstrap.min.css" />
+    <Content Include="themes\simplex\bootstrap.min.css" />
+    <Content Include="themes\slate\bootstrap.min.css" />
+    <Content Include="themes\spacelab\bootstrap.min.css" />
+    <Content Include="themes\spruce\bootstrap.css" />
+    <Content Include="themes\spruce\bootstrap.min.css" />
+    <Content Include="themes\superhero\bootstrap.min.css" />
+    <Content Include="themes\switch\images\clr\amelia.png" />
+    <Content Include="themes\switch\images\clr\cerulean.png" />
+    <Content Include="themes\switch\images\clr\current.png" />
+    <Content Include="themes\switch\images\clr\cyborg.png" />
+    <Content Include="themes\switch\images\clr\journal.png" />
+    <Content Include="themes\switch\images\clr\readable.png" />
+    <Content Include="themes\switch\images\clr\simplex.png" />
+    <Content Include="themes\switch\images\clr\slate.png" />
+    <Content Include="themes\switch\images\clr\spacelab.png" />
+    <Content Include="themes\switch\images\clr\spruce.png" />
+    <Content Include="themes\switch\images\clr\superhero.png" />
+    <Content Include="themes\switch\images\clr\united.png" />
+    <Content Include="themes\switch\images\hideme.png" />
+    <Content Include="themes\switch\images\pattern\pattern1.png" />
+    <Content Include="themes\switch\images\pattern\pattern10.png" />
+    <Content Include="themes\switch\images\pattern\pattern11.png" />
+    <Content Include="themes\switch\images\pattern\pattern12.png" />
+    <Content Include="themes\switch\images\pattern\pattern13.png" />
+    <Content Include="themes\switch\images\pattern\pattern14.png" />
+    <Content Include="themes\switch\images\pattern\pattern15.png" />
+    <Content Include="themes\switch\images\pattern\pattern16.png" />
+    <Content Include="themes\switch\images\pattern\pattern16~.png" />
+    <Content Include="themes\switch\images\pattern\pattern17.png" />
+    <Content Include="themes\switch\images\pattern\pattern17~.png" />
+    <Content Include="themes\switch\images\pattern\pattern18.png" />
+    <Content Include="themes\switch\images\pattern\pattern19.png" />
+    <Content Include="themes\switch\images\pattern\pattern19~.png" />
+    <Content Include="themes\switch\images\pattern\pattern2.png" />
+    <Content Include="themes\switch\images\pattern\pattern20.png" />
+    <Content Include="themes\switch\images\pattern\pattern20~.png" />
+    <Content Include="themes\switch\images\pattern\pattern3.png" />
+    <Content Include="themes\switch\images\pattern\pattern4.png" />
+    <Content Include="themes\switch\images\pattern\pattern5.png" />
+    <Content Include="themes\switch\images\pattern\pattern6.png" />
+    <Content Include="themes\switch\images\pattern\pattern7.png" />
+    <Content Include="themes\switch\images\pattern\pattern8.png" />
+    <Content Include="themes\switch\images\pattern\pattern9.png" />
+    <Content Include="themes\switch\images\styleTgl.png" />
+    <Content Include="themes\switch\theamswitcher.js" />
+    <Content Include="themes\switch\themeswitch.css" />
+    <Content Include="themes\united\bootstrap.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AOG.aspx.cs">
+      <DependentUpon>AOG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AOG.aspx.designer.cs">
+      <DependentUpon>AOG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courier.aspx.cs">
+      <DependentUpon>Courier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courier.aspx.designer.cs">
+      <DependentUpon>Courier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="D2D.Master.cs">
+      <DependentUpon>D2D.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="D2D.Master.designer.cs">
+      <DependentUpon>D2D.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents.aspx.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents.aspx.designer.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Envelopes.aspx.cs">
+      <DependentUpon>Envelopes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Envelopes.aspx.designer.cs">
+      <DependentUpon>Envelopes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expedite.aspx.cs">
+      <DependentUpon>Expedite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expedite.aspx.designer.cs">
+      <DependentUpon>Expedite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fragile.aspx.cs">
+      <DependentUpon>Fragile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fragile.aspx.designer.cs">
+      <DependentUpon>Fragile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Franchise.aspx.cs">
+      <DependentUpon>Franchise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Franchise.aspx.designer.cs">
+      <DependentUpon>Franchise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Medical.aspx.cs">
+      <DependentUpon>Medical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medical.aspx.designer.cs">
+      <DependentUpon>Medical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NationWide.aspx.cs">
+      <DependentUpon>NationWide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NationWide.aspx.designer.cs">
+      <DependentUpon>NationWide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NextDay.aspx.cs">
+      <DependentUpon>NextDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NextDay.aspx.designer.cs">
+      <DependentUpon>NextDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Packages.aspx.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packages.aspx.designer.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parcels.aspx.cs">
+      <DependentUpon>Parcels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parcels.aspx.designer.cs">
+      <DependentUpon>Parcels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayChecks.aspx.cs">
+      <DependentUpon>PayChecks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayChecks.aspx.designer.cs">
+      <DependentUpon>PayChecks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SameDay.aspx.cs">
+      <DependentUpon>SameDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SameDay.aspx.designer.cs">
+      <DependentUpon>SameDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="D2D.Master" />
+    <Content Include="Accounts\themes\font\fontawesome-webfont.eot" />
+    <Content Include="Accounts\themes\font\fontawesome-webfont.ttf" />
+    <Content Include="Accounts\themes\font\fontawesome-webfont.woff" />
+    <Content Include="Accounts\themes\images\AOG.psd" />
+    <Content Include="Accounts\themes\images\clients\YouTube.psd" />
+    <Content Include="Accounts\themes\images\D2DDeliveryNetwork-Logo.psd" />
+    <Content Include="Accounts\themes\images\Logistics.psd" />
+    <None Include="packages.config" />
+    <Content Include="themes\font\fontawesome-webfont.eot" />
+    <Content Include="themes\font\fontawesome-webfont.ttf" />
+    <Content Include="themes\font\fontawesome-webfont.woff" />
+    <Content Include="themes\images\AOG.psd" />
+    <Content Include="themes\images\clients\YouTube.psd" />
+    <Content Include="themes\images\D2DDeliveryNetwork-Logo.psd" />
+    <Content Include="themes\images\Logistics.psd" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19755</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19755/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
